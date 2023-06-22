@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1002655908474806170}
   - component: {fileID: 5994869083713786715}
   - component: {fileID: 7608805051130725870}
+  - component: {fileID: 7365310052962698040}
+  - component: {fileID: 7039812127496061817}
   m_Layer: 0
   m_Name: Astolfo
   m_TagString: Untagged
@@ -182,3 +184,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181a98dc19b945d4ba503a0288923966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7365310052962698040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002655908474806174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20b22c1de0b4c642ab92e3de90ee5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+--- !u!114 &7039812127496061817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002655908474806174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0216da23f612a42a64bcb45936b95f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: YOU DIED
