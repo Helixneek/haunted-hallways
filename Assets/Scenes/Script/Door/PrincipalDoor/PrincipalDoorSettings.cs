@@ -8,8 +8,8 @@ public class PrincipalDoorSettings : MonoBehaviour
     [SerializeField] private Transform destination;
     [SerializeField] private GameObject keyTxt;
 
-    private GameManager gameManager;
     private bool playerDetected;
+    private bool keyTaken;
     private GameObject playerGO;
 
     public Transform GetDestination()
@@ -17,19 +17,17 @@ public class PrincipalDoorSettings : MonoBehaviour
         return destination;
     }
 
-    private void Awake()
-    {
-        gameManager = FindObjectOfType<GameManager>();
-    }
-
+    // Start is called before the first frame update
     void Start()
     {
         playerDetected = false;
+        keyTaken = false;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (playerDetected && gameManager.hasPrincipalKey)
+        if (playerDetected && keyTaken)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -56,5 +54,10 @@ public class PrincipalDoorSettings : MonoBehaviour
             playerDetected = false;
             keyTxt.SetActive(false);
         }
+    }
+
+    public void SetKeyTaken(bool taken)
+    {
+        keyTaken = taken;
     }
 }
