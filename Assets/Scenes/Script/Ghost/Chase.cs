@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,35 @@ public class Chase : MonoBehaviour
 {
     public GameObject player;
     public float speed;
+    public bool currentlyChasing = false;
+
+    private GameManager gm;
+
+    private void Awake()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
+    {
+        if(gm.playerSoundMade)
+        {
+            currentlyChasing = true;
+            ChasePlayer();
+        } else
+        {
+            currentlyChasing = false;
+            Wander();
+        }
+    }
+
+    public void Wander()
+    {
+
+    }
+
+    public void ChasePlayer()
     {
         Vector3 scale = transform.localScale;
 
@@ -26,6 +53,6 @@ public class Chase : MonoBehaviour
 
 
 
-        transform.localScale = scale;   
-    }       
+        transform.localScale = scale;
+    }
 }

@@ -24,10 +24,8 @@ public class GameManager : MonoBehaviour
 
     public void SoundAlert()
     {
-        if(playerSoundMade)
-        {
-            Debug.Log("uh oh sound made!");
-        }
+        playerSoundMade = true;
+        Debug.Log("uh oh sound made!");
     }
 
     // Setters

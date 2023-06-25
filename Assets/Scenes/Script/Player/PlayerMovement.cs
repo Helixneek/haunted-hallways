@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
+public enum PlayerGameState
+{
+    STANDING,
+    HIDING,
+    DEAD
+}
+
 public class PlayerMovement : MonoBehaviour
 {
 

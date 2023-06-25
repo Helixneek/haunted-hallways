@@ -23,7 +23,7 @@ public class EnemyTeleporter : MonoBehaviour
 
         if (currentTeleporter != null)
         {
-            transform.position = currentTeleporter.GetDestination().position;
+            transform.position = currentTeleporter.GetComponent<Teleporter01>().EnterRoom().position;
         }
 
         canTeleport = true;

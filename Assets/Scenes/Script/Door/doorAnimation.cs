@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorAnimation : MonoBehaviour
 {
     public Sprite openDoorSprite;
     public Sprite closedDoorSprite;
@@ -14,7 +14,8 @@ public class DoorController : MonoBehaviour
 
     private void Start()
     {
-        doorSpriteRenderer = GetComponent<SpriteRenderer>();
+        //doorSpriteRenderer = GetComponent<SpriteRenderer>();
+        doorSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         doorSpriteRenderer.sprite = closedDoorSprite; // Set the initial sprite to closed door
     }
 
