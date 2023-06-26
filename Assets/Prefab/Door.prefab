@@ -158,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1281088557
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1852601687, guid: 6dd31424de4f6d546a4e7d1d570fa4c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -233,3 +233,4 @@ MonoBehaviour:
   openDoorSprite: {fileID: 101091270, guid: 6dd31424de4f6d546a4e7d1d570fa4c0, type: 3}
   closedDoorSprite: {fileID: -1852601687, guid: 6dd31424de4f6d546a4e7d1d570fa4c0, type: 3}
   player: {fileID: 1597923572463964936, guid: 15c131bca25632347ad7629d1626b2a7, type: 3}
+  doorSpriteRenderer: {fileID: 0}

@@ -22,13 +22,22 @@ public class GameManager : MonoBehaviour
     // Player sound handling
     public bool playerSoundMade;
 
+    private Chase chaser;
+
+    private void Awake()
+    {
+        chaser = FindObjectOfType<Chase>().GetComponent<Chase>();
+    }
+
     public void SoundAlert()
     {
         playerSoundMade = true;
+        chaser.lastAstolfoFloor = astolfoFloor;
+        chaser.lastAstolfoRoom = astolfoRoom;
         Debug.Log("uh oh sound made!");
     }
 
-    // Setters
+    // Setters for Astolfo
     public void SetAstolfoFloor(int floor)
     {
         astolfoFloor = floor;
@@ -39,7 +48,7 @@ public class GameManager : MonoBehaviour
         astolfoRoom = name;
     }
 
-    // Getters
+    // Getters for Astolfo
     public int GetAstolfoFloor()
     {
         return astolfoFloor;
@@ -48,5 +57,28 @@ public class GameManager : MonoBehaviour
     public string GetAstolfoRoom()
     {
         return astolfoRoom;
+    }
+
+    // -------------------------------------------------------------------------
+    // Setters for Ghost
+    public void SetGhostFloor(int floor)
+    {
+        ghostFloor = floor;
+    }
+
+    public void SetGhostRoom(string name)
+    {
+        ghostRoom = name;
+    }
+
+    // Getters for Ghost
+    public int GetGhostFloor()
+    {
+        return ghostFloor;
+    }
+
+    public string GetGhostRoom()
+    {
+        return ghostRoom;
     }
 }

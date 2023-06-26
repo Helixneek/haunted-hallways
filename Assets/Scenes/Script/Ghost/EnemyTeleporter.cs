@@ -4,14 +4,33 @@ using UnityEngine;
 
 public class EnemyTeleporter : MonoBehaviour
 {
-    private Teleporter01 currentTeleporter;
+    [SerializeField] private GameObject currentTeleporter;
     private bool canTeleport = true;
+    public bool teleportIncoming = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Teleporter") && canTeleport)
         {
-            currentTeleporter = collision.gameObject.GetComponent<Teleporter01>();
+            currentTeleporter = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Teleporter"))
+        {
+            if (collision.gameObject == currentTeleporter)
+            {
+                currentTeleporter = null;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if(teleportIncoming)
+        {
             StartCoroutine(TeleportNPCAfterDelay());
         }
     }
@@ -19,13 +38,24 @@ public class EnemyTeleporter : MonoBehaviour
     private IEnumerator TeleportNPCAfterDelay()
     {
         canTeleport = false;
-        yield return new WaitForSeconds(3f);
+        Transform newPos = currentTeleporter.GetComponent<Teleporter01>().GhostEnterRoom();
+
+        yield return new WaitForSeconds(1f);
 
         if (currentTeleporter != null)
         {
-            transform.position = currentTeleporter.GetComponent<Teleporter01>().EnterRoom().position;
+            transform.position = newPos.position;
+
+            Debug.Log("teleport succ");
+
+        } else if(currentTeleporter == null)
+        {
+            Debug.Log("no teleporter found");
         }
 
+        yield return new WaitForSeconds(1f);
+
         canTeleport = true;
+        teleportIncoming = false;
     }
 }

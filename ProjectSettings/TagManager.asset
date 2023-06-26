@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Player
   - Ghost
-  - 
+  - Door
   - 
   - 
   - 
@@ -53,4 +53,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2682421715
+    locked: 0
+  - name: Ghost
+    uniqueID: 687175447
     locked: 0

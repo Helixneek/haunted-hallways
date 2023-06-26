@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerTeleporter : MonoBehaviour
 {
-    private GameObject currentTeleporter;
+    [SerializeField] private GameObject currentTeleporter;
+    [SerializeField] private Animator fadeToBlack;
 
     void Update()
     {
@@ -37,10 +38,26 @@ public class PlayerTeleporter : MonoBehaviour
         {
             if (currentTeleporter != null)
             {
-                //transform.position = currentTeleporter.GetComponent<Teleporter01>().GetDestination().position;
-                transform.position = currentTeleporter.GetComponent<Teleporter01>().EnterRoom().position;
+                StartCoroutine(TeleportAfterFade());
+                //Invoke("TeleportAfterFade", 0);
             }
         }
+    }
+
+    public IEnumerator TeleportAfterFade()
+    {
+        fadeToBlack.Play("fadeOut");
+
+        Transform newPos = currentTeleporter.GetComponent<Teleporter01>().EnterRoom();
+        Debug.Log(newPos);
+
+        yield return new WaitForSeconds(0.15f);
+
+        transform.position = newPos.position;
+
+        yield return new WaitForSeconds(0.15f);
+
+        fadeToBlack.Play("fadeIn");
     }
 }
 

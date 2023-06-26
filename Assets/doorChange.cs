@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class doorChange : MonoBehaviour
+public class DoorChange : MonoBehaviour
 {
     public Sprite openDoorSprite;
     public Sprite closedDoorSprite;
@@ -10,11 +10,15 @@ public class doorChange : MonoBehaviour
     public GameObject player;
     private bool playerSprite;
 
-    private SpriteRenderer doorSpriteRenderer;
+    public SpriteRenderer doorSpriteRenderer;
 
     private void Start()
     {
-        doorSpriteRenderer = GetComponent<SpriteRenderer>();
+        //doorSpriteRenderer = GameObject.Find("Door Sprite").GetComponent<SpriteRenderer>();
+        //if(doorSpriteRenderer == null)
+        //{
+        //    Debug.Log("sprite redner not found");
+        //}
         doorSpriteRenderer.sprite = closedDoorSprite; // Set the initial sprite to closed door
     }
 
@@ -23,7 +27,7 @@ public class doorChange : MonoBehaviour
         if (collision.gameObject == player)
         {
             playerSprite = true;
-            UpdateDoorSprite();
+            //UpdateDoorSprite();
         }
     }
 
@@ -32,7 +36,7 @@ public class doorChange : MonoBehaviour
         if (collision.gameObject == player)
         {
             playerSprite = false;
-            UpdateDoorSprite();
+            //UpdateDoorSprite();
         }
     }
 
@@ -41,9 +45,16 @@ public class doorChange : MonoBehaviour
         if (playerSprite)
         {
             doorSpriteRenderer.sprite = openDoorSprite;
+            doorSpriteRenderer.sprite = closedDoorSprite;
         }
-        else
+    }
+
+    public IEnumerator OpenDoor()
+    {
+        if(playerSprite)
         {
+            doorSpriteRenderer.sprite = openDoorSprite;
+            yield return new WaitForSeconds(0.5f);
             doorSpriteRenderer.sprite = closedDoorSprite;
         }
     }

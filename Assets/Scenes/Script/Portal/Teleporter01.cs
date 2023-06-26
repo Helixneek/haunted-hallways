@@ -11,15 +11,16 @@ public class Teleporter01 : MonoBehaviour
 
     private GameManager gameManager;
     private GameObject lockedText;
+    private DoorChange doorChange;
 
     [Header("Set Door Destination Tag")]
-    [SerializeField] private bool isStairs;
-    [SerializeField] private bool isNormalDoor;
-    [SerializeField] private bool isPrincipalDoor;
+    public bool isStairs;
+    public bool isNormalDoor;
+    public bool isPrincipalDoor;
 
     [Header("Set Door Destination Value")]
-    [SerializeField] private int nextFloor;
-    [SerializeField] private string nextRoomName;
+    public int nextFloor;
+    public string nextRoomName;
 
     bool playerDetected;
     GameObject playerGO;
@@ -27,6 +28,7 @@ public class Teleporter01 : MonoBehaviour
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        doorChange = GetComponent<DoorChange>();
         lockedText = GameObject.Find("Popup Text Canvas/Door Locked Text");
     }
 
@@ -73,7 +75,8 @@ public class Teleporter01 : MonoBehaviour
                 if (isPrincipalDoor && gameManager.hasPrincipalKey)
                 {
                     Debug.Log("principal room entered");
-                    gameManager.SetAstolfoFloor(nextFloor); // This has to be changed specifically if its a door or stairs
+                    StartCoroutine(doorChange.OpenDoor());
+                    gameManager.SetAstolfoRoom(nextRoomName); // This has to be changed specifically if its a door or stairs
                     playerDetected = false;
                     return posToGo;
                 }
@@ -81,10 +84,19 @@ public class Teleporter01 : MonoBehaviour
                 else if (isNormalDoor)
                 {
                     Debug.Log("normal room entered");
-                    gameManager.SetAstolfoFloor(nextFloor); // This as well, and all subsequent ifs
+                    StartCoroutine(doorChange.OpenDoor());
+                    gameManager.SetAstolfoRoom(nextRoomName); // This as well, and all subsequent ifs
                     playerDetected = false;
                     return posToGo;
-                } 
+
+                } else if (isStairs)
+                {
+                    Debug.Log("floor changed");
+                    StartCoroutine(doorChange.OpenDoor());
+                    gameManager.SetAstolfoFloor(nextFloor);
+                    playerDetected = false;
+                    return posToGo;
+                }
                 else {
                     // play the sound effect
                     // show display the ui text saying that you fucked up
@@ -95,6 +107,27 @@ public class Teleporter01 : MonoBehaviour
         }
 
         return this.transform;
+    }
+
+    public Transform GhostEnterRoom()
+    {
+        if(isStairs)
+        {
+            Debug.Log("ghost moved floors");
+            StartCoroutine(doorChange.OpenDoor());
+            gameManager.SetGhostFloor(nextFloor);
+            playerDetected = false;
+            return posToGo;
+
+        } else
+        {
+            Debug.Log("ghost moved rooms");
+            StartCoroutine(doorChange.OpenDoor());
+            gameManager.SetGhostRoom(nextRoomName);
+            playerDetected = false;
+            return posToGo;
+        }
+          
     }
 
     IEnumerator LockedDoor()
