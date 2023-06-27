@@ -144,9 +144,14 @@ public class Chase : MonoBehaviour
 
     public void PrepareTeleport(Transform target)
     {
-        if(target.transform.position.x == transform.position.x)
+        if (target.transform.position.x - 1.5f <= transform.position.x && transform.position.x <= target.transform.position.x + 1.5f)
         {
             enemyTeleporter.teleportIncoming = true;
         }
+
+        //if(target.transform.position.x == transform.position.x)
+        //{
+        //    enemyTeleporter.teleportIncoming = true;
+        //}
     }
 }

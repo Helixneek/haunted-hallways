@@ -116,7 +116,6 @@ public class Teleporter01 : MonoBehaviour
             Debug.Log("ghost moved floors");
             StartCoroutine(doorChange.OpenDoor());
             gameManager.SetGhostFloor(nextFloor);
-            playerDetected = false;
             return posToGo;
 
         } else
@@ -124,7 +123,6 @@ public class Teleporter01 : MonoBehaviour
             Debug.Log("ghost moved rooms");
             StartCoroutine(doorChange.OpenDoor());
             gameManager.SetGhostRoom(nextRoomName);
-            playerDetected = false;
             return posToGo;
         }
           
