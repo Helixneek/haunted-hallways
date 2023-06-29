@@ -58,4 +58,21 @@ public class EnemyTeleporter : MonoBehaviour
         canTeleport = true;
         teleportIncoming = false;
     }
+
+    public void Teleport(Teleporter01 destination)
+    {
+        Transform newPos = destination.GetComponent<Teleporter01>().GhostEnterRoom();
+
+        if (destination != null)
+        {
+            transform.position = newPos.position;
+
+            Debug.Log("teleport succ");
+
+        }
+        else if (destination == null)
+        {
+            Debug.Log("no teleporter found");
+        }
+    }
 }

@@ -11,8 +11,8 @@ public class KillerPillar : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayesHealthManagement.health--;
-            if (PlayesHealthManagement.health <= 0)
+            PlayerHealthManagement.health--;
+            if (PlayerHealthManagement.health <= 0)
             {
                 collision.gameObject.SetActive(false);
                 SceneChanges(sceneName);

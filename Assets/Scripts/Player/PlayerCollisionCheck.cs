@@ -12,8 +12,8 @@ public class PlayerCollisionCheck : MonoBehaviour
        
         if (collision.transform.tag == "Ghost")
         {
-            PlayesHealthManagement.health--;
-            if (PlayesHealthManagement.health <= 0)
+            PlayerHealthManagement.health--;
+            if (PlayerHealthManagement.health <= 0)
             {
                 Debug.Log("AAAA");
                 gameObject.SetActive(false);

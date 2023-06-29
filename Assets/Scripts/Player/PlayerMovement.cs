@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed; //player movement speed
+    private float originalSpeed;
     private Rigidbody2D rbPlayer;
     private bool facingRight = true;
     private float moveDirection;
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        originalSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -49,9 +50,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(moveDirection));
     }
-
-
-
 
     private void playersMovement()
     {
@@ -84,5 +82,13 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0f, 180f, 0f); // characternya biar dirotate 180 derajat biar balik ke kiri 
     }
 
+    public void Freeze()
+    {
+        rbPlayer.velocity = Vector2.zero;
+    }
 
+    public void Unfreeze()
+    {
+        moveSpeed = originalSpeed;
+    }
 }

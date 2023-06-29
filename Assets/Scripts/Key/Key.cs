@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class Key : MonoBehaviour
 {
 
@@ -48,11 +47,8 @@ public class Key : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //if (collision.gameObject.name.Equals("Player"))
-        //{
-            pickUPText.gameObject.SetActive(false);
-            ableToBePickedUp = false;
-        //}
+        pickUPText.gameObject.SetActive(false);
+        ableToBePickedUp = false;
     }
 
 

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public bool hasPrincipalKey;
     public bool hasStorageKey;
     public bool hasSecurityKey;
+    public bool hasBlueprint;
+    public int amountofPagesOwned;
 
     // Player sound handling
     public bool playerSoundMade;

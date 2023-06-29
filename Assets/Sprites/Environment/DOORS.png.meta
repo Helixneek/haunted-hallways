@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DOORS_0
+      name: 1a
       rect:
         serializedVersion: 2
         x: 1363
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_1
+      name: 1b
       rect:
         serializedVersion: 2
         x: 1512
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_2
+      name: 1c
       rect:
         serializedVersion: 2
         x: 1658
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_3
+      name: 2a
       rect:
         serializedVersion: 2
         x: 1813
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_4
+      name: 2b
       rect:
         serializedVersion: 2
         x: 1961
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_5
+      name: 2c
       rect:
         serializedVersion: 2
         x: 2098
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_6
+      name: 3a
       rect:
         serializedVersion: 2
         x: 2242
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_7
+      name: 3b
       rect:
         serializedVersion: 2
         x: 2385
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_8
+      name: 3c
       rect:
         serializedVersion: 2
         x: 2541
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_9
+      name: staff
       rect:
         serializedVersion: 2
         x: 2698
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_10
+      name: janitor
       rect:
         serializedVersion: 2
         x: 2842
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_11
+      name: cafeteria
       rect:
         serializedVersion: 2
         x: 2985
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_12
+      name: open archway 1
       rect:
         serializedVersion: 2
         x: 50
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_13
+      name: open archway 2
       rect:
         serializedVersion: 2
         x: 755
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_14
+      name: small door
       rect:
         serializedVersion: 2
         x: 1480
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_15
+      name: open double door
       rect:
         serializedVersion: 2
         x: 2092
@@ -453,11 +453,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_16
+      name: closed double door
       rect:
         serializedVersion: 2
         x: 2870
-        y: 86
+        y: 89
         width: 626
         height: 817
       alignment: 9
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_17
+      name: male sign
       rect:
         serializedVersion: 2
         x: 3541
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DOORS_18
+      name: female sign
       rect:
         serializedVersion: 2
         x: 3771
@@ -526,25 +526,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DOORS_0: -211644825
-      DOORS_1: -1375889251
-      DOORS_10: -1730401053
-      DOORS_11: -741376793
-      DOORS_12: -745041250
-      DOORS_13: 410002576
-      DOORS_14: -888618806
-      DOORS_15: 101091270
-      DOORS_16: -1852601687
-      DOORS_17: 1521647791
-      DOORS_18: -71451059
-      DOORS_2: -895383400
-      DOORS_3: 1528261527
-      DOORS_4: -855106116
-      DOORS_5: -1906760461
-      DOORS_6: -146012301
-      DOORS_7: 2139809895
-      DOORS_8: -1181961409
-      DOORS_9: 1292920999
+      1a: -211644825
+      1b: -1375889251
+      1c: -895383400
+      2a: 1528261527
+      2b: -855106116
+      2c: -1906760461
+      3a: -146012301
+      3b: 2139809895
+      3c: -1181961409
+      cafeteria: -741376793
+      closed double door: -1852601687
+      female sign: -71451059
+      janitor: -1730401053
+      male sign: 1521647791
+      open archway 1: -745041250
+      open archway 2: 410002576
+      open double door: 101091270
+      small door: -888618806
+      staff: 1292920999
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

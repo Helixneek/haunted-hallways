@@ -117,15 +117,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_0
+      name: white paper 1
       rect:
         serializedVersion: 2
         x: 718
-        y: 1003
+        y: 1005
         width: 155
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_1
+      name: torn paper 1
       rect:
         serializedVersion: 2
         x: 880
@@ -146,7 +146,7 @@ TextureImporter:
         width: 35
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_2
+      name: torn paper 2
       rect:
         serializedVersion: 2
         x: 980
@@ -167,7 +167,7 @@ TextureImporter:
         width: 42
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_3
+      name: white paper 3
       rect:
         serializedVersion: 2
         x: 1075
@@ -188,7 +188,7 @@ TextureImporter:
         width: 107
         height: 179
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_4
+      name: post it note
       rect:
         serializedVersion: 2
         x: 597
@@ -209,7 +209,7 @@ TextureImporter:
         width: 64
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_5
+      name: red paper 2
       rect:
         serializedVersion: 2
         x: 777
@@ -230,7 +230,7 @@ TextureImporter:
         width: 39
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_6
+      name: white paper 2
       rect:
         serializedVersion: 2
         x: 890
@@ -251,7 +251,7 @@ TextureImporter:
         width: 161
         height: 146
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_7
+      name: clock
       rect:
         serializedVersion: 2
         x: 1429
@@ -272,7 +272,7 @@ TextureImporter:
         width: 179
         height: 179
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_8
+      name: poster 1
       rect:
         serializedVersion: 2
         x: 80
@@ -293,7 +293,7 @@ TextureImporter:
         width: 248
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_9
+      name: red paper 1
       rect:
         serializedVersion: 2
         x: 720
@@ -314,7 +314,7 @@ TextureImporter:
         width: 44
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_10
+      name: torn paper 3
       rect:
         serializedVersion: 2
         x: 1040
@@ -335,7 +335,7 @@ TextureImporter:
         width: 32
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,15 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_11
+      name: poster 2
       rect:
         serializedVersion: 2
-        x: 94
+        x: 92
         y: 448
         width: 169
         height: 249
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_12
+      name: bulletin board
       rect:
         serializedVersion: 2
         x: 565
@@ -377,7 +377,7 @@ TextureImporter:
         width: 701
         height: 388
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_13
+      name: mop
       rect:
         serializedVersion: 2
         x: 1416
@@ -398,7 +398,7 @@ TextureImporter:
         width: 140
         height: 579
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_14
+      name: poster 3
       rect:
         serializedVersion: 2
         x: 96
@@ -419,7 +419,7 @@ TextureImporter:
         width: 168
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_15
+      name: cardboard box
       rect:
         serializedVersion: 2
         x: 673
@@ -440,7 +440,7 @@ TextureImporter:
         width: 252
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_16
+      name: bucket
       rect:
         serializedVersion: 2
         x: 1036
@@ -461,7 +461,7 @@ TextureImporter:
         width: 122
         height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,15 +474,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_17
+      name: fire extinguisher
       rect:
         serializedVersion: 2
         x: 1638
         y: 100
         width: 86
         height: 254
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.515713, y: 0.02830229}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ASSET2_Board_Cardboard_Bucket_18
+      name: fire extinguihser holder
       rect:
         serializedVersion: 2
         x: 1742
@@ -503,7 +503,7 @@ TextureImporter:
         width: 63
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -526,25 +526,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ASSET2_Board_Cardboard_Bucket_0: -1236628939
-      ASSET2_Board_Cardboard_Bucket_1: -1917566269
-      ASSET2_Board_Cardboard_Bucket_10: -1431089759
-      ASSET2_Board_Cardboard_Bucket_11: -575468546
-      ASSET2_Board_Cardboard_Bucket_12: 2103168273
-      ASSET2_Board_Cardboard_Bucket_13: 1662009438
-      ASSET2_Board_Cardboard_Bucket_14: -508675788
-      ASSET2_Board_Cardboard_Bucket_15: -1550420596
-      ASSET2_Board_Cardboard_Bucket_16: 214851257
-      ASSET2_Board_Cardboard_Bucket_17: -1596300144
-      ASSET2_Board_Cardboard_Bucket_18: -964343950
-      ASSET2_Board_Cardboard_Bucket_2: -1341668838
-      ASSET2_Board_Cardboard_Bucket_3: 150965
-      ASSET2_Board_Cardboard_Bucket_4: 1087516313
-      ASSET2_Board_Cardboard_Bucket_5: 549226211
-      ASSET2_Board_Cardboard_Bucket_6: -97590149
-      ASSET2_Board_Cardboard_Bucket_7: -306954137
-      ASSET2_Board_Cardboard_Bucket_8: 950101377
-      ASSET2_Board_Cardboard_Bucket_9: -111254015
+      bucket: 214851257
+      bulletin board: 2103168273
+      cardboard box: -1550420596
+      clock: -306954137
+      fire extinguihser holder: -964343950
+      fire extinguisher: -1596300144
+      mop: 1662009438
+      post it note: 1087516313
+      poster 1: 950101377
+      poster 2: -575468546
+      poster 3: -508675788
+      red paper 1: -111254015
+      red paper 2: 549226211
+      torn paper 1: -1917566269
+      torn paper 2: -1341668838
+      torn paper 3: -1431089759
+      white paper 1: -1236628939
+      white paper 2: -97590149
+      white paper 3: 150965
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
