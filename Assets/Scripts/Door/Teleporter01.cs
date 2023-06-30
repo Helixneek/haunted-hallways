@@ -7,10 +7,10 @@ public class Teleporter01 : MonoBehaviour
 {
     [SerializeField] Transform posToGo;
     [SerializeField] private Transform destination;
-    [SerializeField] GameObject keyTxt;
+    [SerializeField] private GameObject keyTxt;
+    [SerializeField] private GameObject lockedText;
 
     private GameManager gameManager;
-    private GameObject lockedText;
     private DoorChange doorChange;
 
     [Header("Set Door Destination Tag")]
@@ -29,7 +29,6 @@ public class Teleporter01 : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         doorChange = GetComponent<DoorChange>();
-        lockedText = GameObject.Find("Popup Text Canvas/Door Locked Text");
     }
 
     public Transform GetDestination()
@@ -41,6 +40,7 @@ public class Teleporter01 : MonoBehaviour
     {
         playerDetected = false;
         lockedText.SetActive(false);
+        keyTxt.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
