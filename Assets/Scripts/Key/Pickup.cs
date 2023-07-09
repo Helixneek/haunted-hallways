@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public enum PickupType
 {
-    PrincipalKey, SecurityKey, StorageKey, JournalPage, Blueprint
+    PrincipalKey, SecurityKey, StorageKey, JournalPage, Blueprint, SecurityFootage, Documents
 } 
 
 public class Pickup : MonoBehaviour
@@ -22,12 +22,15 @@ public class Pickup : MonoBehaviour
     [SerializeField] private Sprite pickupImage;
     [SerializeField] private GameObject pickupNotification;
 
+    [Header("Etc")]
+    [SerializeField] private AudioClip pickupSound;
+
     //private Image pickupBG;
     private Image pickupIcon;
     private TextMeshProUGUI pickupText;
     private Animator pickupNotificationAnimator;
     private SpriteRenderer itemSprite;
-    
+    private AudioSource audioSource;
 
     private void Awake()
     {
@@ -37,6 +40,8 @@ public class Pickup : MonoBehaviour
         pickupIcon = pickupNotification.transform.GetChild(1).GetComponent<Image>();
         pickupText = pickupNotification.transform.GetChild(2).GetComponent<TextMeshProUGUI>();
         pickupNotificationAnimator = pickupNotification.GetComponent<Animator>();
+
+        audioSource = GetComponent<AudioSource>();
 
         itemSprite = GetComponent<SpriteRenderer>();
     }
@@ -85,31 +90,42 @@ public class Pickup : MonoBehaviour
             {
                 case PickupType.PrincipalKey: // Might need to add more, probably the UI appearing
                     gameManager.hasPrincipalKey = true;
-                    pickupText.text = "Principal key obtained";
+                    pickupText.text = "Kunci ruang kepala sekolah ditemukan";
                     break;
 
                 case PickupType.StorageKey:
                     gameManager.hasStorageKey = true;
-                    pickupText.text = "Storage key obtained";
+                    pickupText.text = "Kunci gudang ditemukan";
                     break;
 
                 case PickupType.SecurityKey:
                     gameManager.hasSecurityKey = true;
-                    pickupText.text = "Security key obtained";
+                    pickupText.text = "Kunci ruang satpam ditemukan";
                     break;
 
                 case PickupType.Blueprint:
                     gameManager.hasBlueprint = true;
-                    pickupText.text = "Blueprint obtained";
+                    pickupText.text = "Blueprint sekolah ditemukan";
                     break;
 
                 case PickupType.JournalPage: 
                     gameManager.amountofPagesOwned++;
-                    pickupText.text = "Journal page obtained";
+                    pickupText.text = "Halaman jurnal ke-" + gameManager.amountofPagesOwned + " ditemukan";
+                    break;
+
+                case PickupType.SecurityFootage:
+                    gameManager.hasSecurityFootage = true;
+                    pickupText.text = "Rekaman CCTV ditemukan";
+                    break;
+
+                case PickupType.Documents:
+                    gameManager.hasDocuments = true;
+                    pickupText.text = "Dokumen sekolah ditemukan";
                     break;
             }
 
             pickupIcon.sprite = pickupImage;
+            PlayPickupSound();
 
             StartCoroutine(ShowNotification());
         }
@@ -136,8 +152,15 @@ public class Pickup : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnDestroy()
+    public void PlayPickupSound()
     {
-        Debug.Log("destroyed");
+        if (pickupSound == null)
+        {
+            Debug.LogWarning("No pickup sounds assigned to the item.");
+            return;
+        }
+
+        audioSource.clip = pickupSound;
+        audioSource.Play();
     }
 }

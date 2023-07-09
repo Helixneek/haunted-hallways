@@ -17,7 +17,6 @@ public class PlayerHealthManagement : MonoBehaviour
         health = 3;
     }
 
-
     // Update is called once per frame
     void Update()
     {

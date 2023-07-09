@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rbPlayer;
     private bool facingRight = true;
     private float moveDirection;
+    private bool playerCurrentlyHiding = false;
 
     public Animator animator;
 
@@ -90,5 +91,20 @@ public class PlayerMovement : MonoBehaviour
     public void Unfreeze()
     {
         moveSpeed = originalSpeed;
+    }
+
+    public void SetHide()
+    {
+        playerCurrentlyHiding = true;
+    }
+
+    public void SetUnhide()
+    {
+        playerCurrentlyHiding = false;
+    }
+
+    public bool GetPlayerHideStatus()
+    {
+        return playerCurrentlyHiding;
     }
 }
